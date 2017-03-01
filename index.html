@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Vacant Units in NYC, 2016</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-OiWEn8WwtH+084y4yW2YhhH6z/qTSecHZuk/eiWtnvLtU+Z8lpDsmhOKkex6YARr" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato: 300, 700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:700, 400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="./data/nvd3.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="data/nvd3.css" type="text/css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Vacant Units in NYC, 2016</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li>
+              <a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn" style="padding-bottom: 19px;"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;About</a>
+            </li>
+
+            <li>
+              <a href="https://github.com/livenlulu/vacantunits" id="fork" target="_blank" style="padding-bottom: 19px;"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                &nbsp;Fork Me</a>
+            </li>
+
+
+            <li class="dropdown">
+              <a href="#" id="drop" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manhattan, NY<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" id="one" class="myButton">Manhattan, NY</a></li>
+                <li><a href="#" id="two" class="myButton">Brooklyn, NY</a></li>
+                <li><a href="#" id="three" class="myButton">Bronx, NY</a></li>
+                <li><a href="#" id="four" class="myButton">Queens, NY</a></li>
+                <li><a href="#" id="five" class="myButton">Staten Island, NY</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <div id="container">
+    <div class="row" style="border-top: 2px solid black;">
+    
+
+      <div id="lef2">
+        
+          <div id="left">
+          
+            <!-- <h1>Rate: The number of unoccupied units available for rent in New York City. Bureau of the Census 2010 - 2015</h1><br>
+           
+ -->
+            <div id="side">
+              
+              <h4>Units available for rent on this block: <br>
+              <b><font size = "5" color="#960707">44.96%</font></b> 
+              </h4>
+            </div>
+
+            
+            <h2><a href="#rent">Rent &amp; Income</a> | 
+            <a href="#race">Race </a> | 
+            <a href="#age">Age </a>
+            </h2>
+            
+
+            <a name="rent"></a><br>
+            <h6><b>Rent &amp; Income ($)</b><br><font size="1">
+
+            <i class="fa fa-square" style="color: #9AC7E2;"></i>
+<!--             &nbsp;Median Monthly Income ($)<br>
+            <i class="fa fa-square" style="color: #377eb8;"></i>&nbsp;
+ -->
+            &nbsp;Median Monthly Rent&nbsp; 
+            <i class="fa fa-square" style="color: #2975A2;"></i>&nbsp;&nbsp;30% Of A Household's Income&nbsp; 
+            <i class="fa fa-square" style="color: #08517C;"></i>&nbsp;&nbsp;Poverty Line
+            </font>
+            </h6>
+            
+            <!-- <div id="chartContainer"> -->
+              <div id="chart">
+                <svg style="width: 100%;"></svg>
+              </div>
+
+            *By general rule-of-thumb, housing costs (left) should not exceed 30 percent of a household's total income (middle).
+
+   <center><div id="line"></div></center>
+
+            <a name="race"></a>
+            <h6><b>Population by Race (%) </b><br><font size="1">
+            <i class="fa fa-square" style="color: #8FACA0;"></i>
+            &nbsp;White&nbsp;
+            <i class="fa fa-square" style="color: #578F77;"></i>
+            &nbsp;Black&nbsp;
+            <i class="fa fa-square" style="color: #2D7556;"></i>
+            &nbsp;Asian&nbsp;
+            <i class="fa fa-square" style="color: #0C5837;"></i>
+            &nbsp;Hispanic&nbsp;
+            <i class="fa fa-square" style="color: #004025;"></i>
+            &nbsp;Other&nbsp;
+              </font></h6>
+              <div id="chart2">
+                <svg style="width: 100%;"></svg>
+              </div>
+
+              <center><div id="line2"></div></center>
+
+              <a name="age"></a>
+              <h6><b>Population by Median Age (#) </b><br><font size="1">
+              <i class="fa fa-square" style="color: #E0AA63;"></i>
+            &nbsp;Male&nbsp;
+            <i class="fa fa-square" style="color: #D1821C;"></i>
+            &nbsp;Female&nbsp;
+            
+              </font>
+
+
+              <div id="chart3">
+                <svg style="width: 100%;"></svg>
+              </div>
+                      
+             <center><div id="line2">
+
+                <a href="https://github.com/livenlulu/vacantunits" target="_blank"><i class="fa fa-github"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://twitter.com/livenlulu" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.facebook.com/lu6ky" target="_blank"><i class="fa fa-facebook"></i></a>
+              </div>
+              </center>
+
+              <br>
+          </div>
+      </div>
+
+      <div id="rig2" >
+        <div id="myMap"></div>
+      </div>
+
+
+    </div>
+
+      <div id="infoWindow" >
+        <h5>Vacant Units<br>(per block)</h5>
+          <ul>
+            <li class="graph">
+              <div id="colors">
+                <div class="quartile" style="background-color:#FFE7E7"></div>
+                <div class="quartile" style="background-color:#FFA6A6"></div>
+                <div class="quartile" style="background-color:#DA4747"></div>
+                <div class="quartile" style="background-color:#BE0E0E"></div>
+                <div class="quartile" style="background-color:#9A0000"></div>
+            
+              </div>
+            </li>
+            <li class="min">Low</li>
+            <li class="max">High</li><br><br>
+          </ul>
+      </div>
+
+      <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">% Vacant Units For Rent, 2015</h4>
+            </div>
+            <div class="modal-body">
+             <!--  <ul class="nav nav-tabs nav-justified" id="aboutTabs"> -->
+                
+               </ul>
+              <div class="tab-content" id="aboutTabsContent">
+                <div class="tab-pane fade active in" id="about">
+                  <h5> Data</h5>
+                  <p> Vacant Units for Rent, 2015, Median Income, 2016, Population by Race, 2016, Population by Median Age, 2016 </p>
+                  <br>
+                  <h5> Data Source </h5>
+                  <p> SimplyMap - Bureau of the Census 2010 Census PL 94 – 171 files for April 1, 2010, Population Estimates Program supplies various input files for age sex race as of 4/1/2010, ACS survey data (5 year version) has been used for a Summary type file and substitutes on an annual basis the previous decennial SF3 files. </br></br>
+
+                  
+                  </p>
+                  <div class="panel panel-danger">
+                    <div class="panel-heading">Credits and Acknowledgments</div>
+                    <ul class="list-group">
+                      <li class="list-group-item"><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, <a href="http://nvd3.org/index.html" target="_blank">NVD3</a>. </li>
+
+                      <li class="list-group-item">Comments or suggestions: Contact <a href="http://www.lucykang.com/contact.html" target="_blank">Lucy</a>. <i class="fa fa-angellist"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script> 
+
+    <script src="js/script.js"></script>
+
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+    <script src="data/nvd3.js"></script>
+     
+  </body>
+</html>

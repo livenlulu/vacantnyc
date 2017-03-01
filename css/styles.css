@@ -1,0 +1,499 @@
+    body {
+        padding: 0;
+        margin: 0;
+        padding-top: 58px;
+    }  
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        font-size:12px;
+        font-family: 'Lato';  
+
+     /*   background-color: #242426;*/
+
+    }
+
+    li { cursor: pointer; cursor: hand; }
+
+    a {
+        color: #960707;
+    }
+
+    a:hover {
+        color: #000;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    h1 {
+        font-size:13px;
+        font-weight: 700;
+
+    }
+
+    h2 {
+        font-family: 'Lato';
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 5px;
+        color: black;
+    }
+    h3 {
+        padding-top: 10px;
+    	font-family: 'Lato';
+    	font-size: 40px;
+    	font-weight: 700;
+    	margin-top: 0px;
+        color: #e8e119;
+    }
+
+    h4 {
+    	font-family: 'Lato';
+    	font-size: 17px;
+    	font-weight: 700;
+        line-height: 30px;
+    }
+
+    h5 {
+        font-family: 'Lato';
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    h6 {
+        font-family: 'Lato';
+        line-height: 18px;
+    }
+
+    ul {
+        padding-left: 0px;
+        margin-top: 10px;
+        list-style:none;
+          -webkit-padding-start: 10px;
+          -webkit-padding-end: 10px;
+    }
+
+
+    .modal-body {
+        padding-top: 10px;
+    }
+
+    .myButton {
+	    margin: 3px;
+	    padding: 8px;
+	    line-height: 15px;
+        font-size: 12px;
+    }
+
+    #side {
+/*        background-color: #242426;*/
+        height:100%;
+       /* width: 100%;*/
+    }
+
+    #line {
+        margin-top:30px;
+        padding-top: 20px;
+        border-top: 1px solid #dfdfdf;
+        border-width: 80%;
+    }
+
+    #line2 {
+        margin-top:10px;
+        padding-top: 20px;
+        border-top: 1px solid #dfdfdf;
+        border-width: 80%;
+    }
+    .fa-github {
+        font-size: 30px;
+    }
+
+    a .fa-github {
+        color: #960707;
+    }
+
+    a .fa-github:hover {
+        color: black;
+    }
+
+    .fa-twitter {
+        font-size: 30px;
+    }
+
+    a .fa-twitter {
+        color: #960707;
+    }
+
+    a .fa-twitter:hover {
+        color: black
+    }
+
+    .fa-facebook {
+        font-size: 30px;
+        vertical-align: top;
+    }
+
+    a .fa-facebook {
+        color:#960707;
+    }
+
+    a .fa-facebook:hover {
+        color: black
+    }
+
+    .input-group {
+        border-radius: 20px;
+    }
+
+
+    #colors {
+        display: table-row;
+    }
+
+    .quartile {
+        display: table-cell;
+    }
+
+    .graph {
+        clear: both;
+   /*     overflow: hidden;*/
+        display: table;
+        height: 16px;
+        width: 100%;
+        border-radius: 3px;
+        -webkit-background-clip: padding;
+        border: 1px solid #b3b3b3;
+    }
+
+    #about-btn:hover {
+        background-color: transparent;
+        color:black;
+        font-weight: 900;
+    }
+
+    #fork:hover {
+        background-color: transparent;
+        color:black;
+        font-weight: 900;
+    }
+
+    #drop:hover {
+        background-color: transparent;
+        color:black;
+        font-weight: 900;
+    }
+
+    .row {
+       /* background-color: #242426;*/
+        margin-left: 0px;
+        margin-right: 0px;
+        color: #000;
+        height: 100%;
+        width: 100%;
+    }
+
+    .panel-danger {
+        border-color: #2975A2;    
+    }
+
+    .panel-danger>.panel-heading {
+        background-color: #2975A2;
+        border-color: #2975A2;
+    }
+
+    #infoWindow {
+        background: #FFFFFF;
+        padding: 4px;
+        margin-top: 0px;
+        margin-left: 30px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        font-size: 10px;
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        width: 120px;
+        display: block;
+        opacity: 0.9;
+        color:black;
+        font-family: 'Roboto', sans-serif;
+        height: 80px;
+        z-index: 20;
+    }
+
+    #infoWindow li.min {
+        float: left;
+        text-transform: uppercase;
+        
+    }
+
+    #infoWindow li.max {
+        float: right;
+        text-transform: uppercase;
+       
+    }
+
+    #infoWindow ul {
+      list-style:none;
+      -webkit-padding-start: 10px;
+      -webkit-padding-end: 10px;
+      margin-top: 5px;
+
+    }
+
+    #infoWindow h5 {
+        font-size:13px;
+        font-family: 'Roboto';
+        font-weight:700;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        line-height: 13px;
+    }
+
+    #alink {
+        color: black;
+        font-weight: 700;
+    }
+
+    .btn-primary {
+        border-radius: 30px;
+        background-color: #e8e119;
+        border-color: #a5a010;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+
+    #left {
+        padding-top:10px;
+        float: left;
+        width: 100%;
+        /*
+        overflow: scroll;*/
+        display: block;
+
+    }
+
+
+    text {
+        font: 12px sans-serif;
+    }
+    
+    #chart svg {
+        height: auto;
+        width:auto;
+    }
+
+    #chart2 svg {
+        height: auto;
+    }
+
+    g.nvd3 .nv-wrap .nv-discreteBarWithAxes {
+        transform-origin: 0px 0px 0px;
+    }
+
+    .nv-y {
+   /*     display: none;*/
+    }   
+    
+    .nv-zeroLine {
+     /*   display: none;*/
+    }
+    .nv-x {
+       color: white;
+       border-color: white;
+    }   
+
+
+    #sq1 {
+        color: #4daf4a;
+    }
+
+
+    #container {
+        height:100%;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        overflow: hidden;
+    }
+
+    #lef2 {
+        padding-left:15px;
+        padding-right: 15px;
+        position: relative;
+        width: 30%;
+        height: 100%;
+    /*    background-image: linear-gradient(to bottom, #2b6988 0%, #1f4b61 100%);*/
+        background-color: #fff;
+        overflow: scroll;
+        display: block;
+        float: left;
+    }
+
+    #rig2 {
+        width: 70%;
+        float: right;
+        background-color: #fff;
+        height:100%;
+       /* position: fixed;*/
+    }
+
+
+    #myMap {
+        height: 100%;
+        width: 100%;
+        float: right;
+        position: fixed;
+        box-shadow: 0 0 10px gray;
+    }
+
+
+    .navbar {
+        margin-bottom: 0px;
+        position:relative;
+        width:100%;
+        top: 2px;
+        
+        height: 60px;
+        border:0px;
+        background-image: linear-gradient(to bottom, #d60522 0%, #960707 100%);
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 19px;
+    }
+
+    .navbar-brand {
+        font-family: 'Lato';
+        font-weight: 900;
+        font-size: 17px;
+        padding-top: 16px;
+       /* text-transform: uppercase;*/
+    }
+
+    .navbar-right>li>a:hover {
+        background-color: transparent;
+        color: black;
+    }
+
+    .navbar-right {
+        margin-top: 0px;
+        font-family: 'Lato';
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .navbar-right a.dropdown-toggle {
+        top: 0;
+        height:59px;
+    }
+
+
+    .navbar-default {
+        position: fixed;
+        right:0;
+        top:0;
+        z-index:130;
+    }
+
+
+    @media screen and (max-width: 900px) {
+    
+    body {
+        padding: 0;
+        margin: 0;
+        padding-top: 41px;
+    }  
+    .navbar-brand {
+        padding-top:12px;
+        font-size: 15px;
+    }
+    .navbar {
+        height: 40px;
+    }
+    .navbar-nav>li>a  {
+        padding-top:12px;
+    }
+
+    .navbar-right a.dropdown-toggle {
+        top: 0;
+        height:48px;
+    }
+
+    .navbar-collapse.in {
+        background-color: #bcbcbc;
+    }
+
+    h4 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    }
+
+    @media screen and (max-width: 767px) {
+
+    #lef2 {
+        padding-left:15px;
+        padding-right: 15px;
+        position: relative;
+        width: 40%;
+  
+    }
+
+    #rig2 {
+        width: 60%;
+        float: right;
+        height:100%;
+        
+        display: block;  
+        z-index: 10;  
+
+    }
+
+     .nv-x {
+       display:none;
+    }   
+
+    .navbar-brand {
+        font-size: 13px;
+    }
+    h4 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    }
+
+
+/*
+
+
+    chartContainer {
+        border-top: 1px dashed #504B9D;
+        padding-top: 7px;
+        margin-top: 9px;
+    }*/
+
+/*
+    .col-sm-9, .col-md-9 {
+        padding-left: 0px;
+        padding-right: 0px;
+        position: absolute;
+        display: block;
+        min-height: 300px;
+        height: 100%;
+    }
+
+    .col-md-3 {
+        height: 100%;
+    }
+
+    .sidebar-cell {   
+        display: block;
+        overflow: scroll;
+    }*/
