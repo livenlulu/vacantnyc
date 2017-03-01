@@ -64,7 +64,7 @@
 
     h6 {
         font-family: 'Lato';
-        line-height: 18px;
+        line-height: 20px;
     }
 
     ul {
@@ -75,7 +75,31 @@
           -webkit-padding-end: 10px;
     }
 
+    #ona {
+        background-color: #960707;
+        margin:0px;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+    }
 
+    #on2 {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0px;
+        padding-bottom: 3px;
+        font-family: Roboto;
+
+    }
+
+.leaflet-popup-content {
+ margin: 0px;
+}
     .modal-body {
         padding-top: 10px;
     }

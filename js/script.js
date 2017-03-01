@@ -160,6 +160,10 @@ var panOptions = {
         mouseout: resetHighlight
         //click: zoomToFeature
     });
+
+    var popup = "<h5 id='ona'><b>" + feature.properties.VALUE2 +  '% </b></h5>' +  '<h6 id="on2">Units are available for rent!' + '</h6>';
+     
+    layer.bindPopup(popup);
   }
 
 
