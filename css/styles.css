@@ -1,7 +1,7 @@
     body {
         padding: 0;
         margin: 0;
-        padding-top: 58px;
+   
     }  
 
     html, body {
@@ -114,7 +114,8 @@
 
     #side {
 /*        background-color: #242426;*/
-        height:100%;
+      
+        background-color: #840303;
        /* width: 100%;*/
     }
 
@@ -248,16 +249,16 @@
         z-index: 20;
     }
 
-    #infoWindow li.min {
+    #infoWindow li#min {
         float: left;
         text-transform: uppercase;
-        
+        width: 50%;
     }
 
-    #infoWindow li.max {
+    #infoWindow li#max {
         float: right;
         text-transform: uppercase;
-       
+       width: 50%;
     }
 
     #infoWindow ul {
@@ -296,6 +297,8 @@
         padding-top:10px;
         float: left;
         width: 100%;
+        padding-left:15px;
+        padding-right: 15px;
         /*
         overflow: scroll;*/
         display: block;
@@ -347,11 +350,21 @@
     }
 
     #lef2 {
-        padding-left:15px;
-        padding-right: 15px;
-        position: relative;
-        width: 30%;
-        height: 100%;
+        padding-left:0px;
+        padding-right: 0px;
+        padding-top:0px;
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 10px;
+        width: 320px;
+        height: 98%;
+        opacity: 0.9;
+         z-index: 10000;
+         border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: #999 solid 1px;
+       
+
     /*    background-image: linear-gradient(to bottom, #2b6988 0%, #1f4b61 100%);*/
         background-color: #fff;
         overflow: scroll;
@@ -359,20 +372,21 @@
         float: left;
     }
 
-    #rig2 {
-        width: 70%;
+/*    #rig2 {
+        width: 100%;
+
         float: right;
         background-color: #fff;
         height:100%;
-       /* position: fixed;*/
-    }
+       /* position: fixed;
+    }*/
 
 
     #myMap {
         height: 100%;
         width: 100%;
-        float: right;
-        position: fixed;
+        display: block;
+        position: absolute;
         box-shadow: 0 0 10px gray;
     }
 
@@ -383,7 +397,7 @@
         width:100%;
         top: 2px;
         
-        height: 60px;
+        height: 0px;
         border:0px;
         background-image: linear-gradient(to bottom, #d60522 0%, #960707 100%);
     }
@@ -431,7 +445,7 @@
     body {
         padding: 0;
         margin: 0;
-        padding-top: 41px;
+     
     }  
     .navbar-brand {
         padding-top:12px;
@@ -463,10 +477,12 @@
     @media screen and (max-width: 767px) {
 
     #lef2 {
-        padding-left:15px;
-        padding-right: 15px;
-        position: relative;
+        padding-left:0px;
+        padding-right: 0px;
+        position: absolute;
+        position: block;
         width: 40%;
+
   
     }
 

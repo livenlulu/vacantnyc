@@ -1,4 +1,4 @@
-var layer = L.tileLayer('https://api.mapbox.com/styles/v1/livenlulu/civklqgt8007y2kqqt5b61zc9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGl2ZW5sdWx1IiwiYSI6ImNpZ3h0ZzltbzB1cTQ0cG0zamthcno1dmwifQ.vZrmbXCCq15ZVuF6g6vhkA',{
+var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',{
     attribution: ''
 });
 
@@ -8,7 +8,7 @@ var layer = L.tileLayer('https://api.mapbox.com/styles/v1/livenlulu/civklqgt8007
 var map = L.map('myMap', { 
   attributionControl: false,
   tap:false
-}).setView( [40.734901,-73.867264], 12);
+}).setView( [40.734771,-73.961334], 12);
 map.addLayer(layer);
 
 map.options.maxZoom = 15;
@@ -92,13 +92,13 @@ var panOptions = {
 
 
   function getColor(d) {
-    return d > 90 ? '#9A0000' :
-           d > 70  ? '#BE0E0E' :
+    return d > 90 ? '#840303' :
+           d > 80  ? '#9A0000' :
+           d > 70  ? '#b31c1b' :
+           // d > 60  ? '#75507b' :
+           d > 60  ? '#BE0E0E' :
            d > 50  ? '#DA4747' :
-           d > 30  ? '#FFA6A6' :
-           // d > 35  ? '#E86464' :
-           // d > 20  ? '#D97777' :
-           // d > 10  ? '#EB9696' :
+           d > 40  ? '#FFA6A6' :
                      '#FFE7E7' ;
 
         // return d > 90 ? '#08517C' :
@@ -116,9 +116,9 @@ var panOptions = {
   function style(feature) {
     return {
         fillColor: getColor(feature.properties.VALUE2),
-        weight: .3,
+        weight: 1,
         opacity: .8,
-        color: 'white',
+        color: getColor(feature.properties.VALUE2),
         dashArray: '0',
         fillOpacity: 0.8
     };
@@ -147,7 +147,7 @@ var panOptions = {
     updateChart3(e.target.feature.properties);
 
     // console.log(layer.feature.properties.VALUE2);
-    $('#side').html('<h4>Units available for rent on this block: ' + '<br><b><font size ="5" color="#960707">' + layer.feature.properties.VALUE2 + '%' +'</font></b> ' + '</h4>');
+    $('#side').html('<center><h4 style="color:white; padding-top:10px; padding-bottom:5px; margin-top: 0px; margin-bottom: 0px;">Vacant Units, NYC - 2016' + '<br><b><font size ="5" color="white">' + layer.feature.properties.VALUE2 + '%' +'</font></b> ' + '</h4></center>');
   	}
 
   function resetHighlight(e) {

@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
+  <!--   <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -60,33 +60,55 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
 
   <div id="container">
-    <div class="row" style="border-top: 2px solid black;">
+    <div class="row">
+
+
     
 
       <div id="lef2">
+
+      <div id="side">
+              
+              <center><h4 style="color:white; padding-top:10px; padding-bottom:5px; margin-top: 0px; margin-bottom: 0px;">Vacant Units, NYC - 2016<br>
+              <b><font size = "5" color="white">44.96%</font></b> 
+              </h4></center>
+            </div>
+
         
           <div id="left">
           
             <!-- <h1>Rate: The number of unoccupied units available for rent in New York City. Bureau of the Census 2010 - 2015</h1><br>
            
  -->
-            <div id="side">
-              
-              <h4>Units available for rent on this block: <br>
-              <b><font size = "5" color="#960707">44.96%</font></b> 
-              </h4>
-            </div>
+            
 
-            
-            <h2><a href="#rent">Rent &amp; Income</a> | 
-            <a href="#race">Race </a> | 
-            <a href="#age">Age </a>
-            </h2>
-            
+
+     
+
+
+             <center><h6><b>Vacant Units Available for Rent (per block)</b></h6></center>
+          <ul>
+            <li class="graph">
+              <div id="colors">
+                <div class="quartile" style="background-color:#FFE7E7"></div>
+                <div class="quartile" style="background-color:#FFA6A6"></div>
+                <div class="quartile" style="background-color:#DA4747"></div>
+                <div class="quartile" style="background-color:#BE0E0E"></div>
+                <div class="quartile" style="background-color:#b31c1b"></div>
+                <div class="quartile" style="background-color:#9A0000"></div>
+                <div class="quartile" style="background-color:#840303"></div>
+              </div>
+            </li>
+            <li id="min" style="float:left;">30%</li>
+            <li id="max" style="float: right;">100%</li>
+          </ul><br>
+
+
+         <center style="height: 0px;"><div style="margin-top: 10px;" id="line"></div></center>
 
             <a name="rent"></a><br>
             <h6><b>Rent &amp; Income ($)</b><br><font size="1">
@@ -155,30 +177,14 @@
           </div>
       </div>
 
-      <div id="rig2" >
+      
         <div id="myMap"></div>
-      </div>
+      
 
 
     </div>
 
-      <div id="infoWindow" >
-        <h5>Vacant Units<br>(per block)</h5>
-          <ul>
-            <li class="graph">
-              <div id="colors">
-                <div class="quartile" style="background-color:#FFE7E7"></div>
-                <div class="quartile" style="background-color:#FFA6A6"></div>
-                <div class="quartile" style="background-color:#DA4747"></div>
-                <div class="quartile" style="background-color:#BE0E0E"></div>
-                <div class="quartile" style="background-color:#9A0000"></div>
-            
-              </div>
-            </li>
-            <li class="min">Low</li>
-            <li class="max">High</li><br><br>
-          </ul>
-      </div>
+    
 
       <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg">
