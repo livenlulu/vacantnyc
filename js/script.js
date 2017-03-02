@@ -8,7 +8,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/
 var map = L.map('myMap', { 
   attributionControl: false,
   tap:false
-}).setView( [40.734771,-73.961334], 12);
+}).setView( [40.718119,-74.046478], 11);
 map.addLayer(layer);
 
 map.options.maxZoom = 15;

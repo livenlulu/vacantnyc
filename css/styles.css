@@ -50,7 +50,7 @@
 
     h4 {
     	font-family: 'Lato';
-    	font-size: 17px;
+    	font-size: 19px;
     	font-weight: 700;
         line-height: 30px;
     }
@@ -358,7 +358,7 @@
         margin-top: 10px;
         width: 320px;
         height: 98%;
-        opacity: 0.9;
+        opacity: 1;
          z-index: 10000;
          border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -468,7 +468,7 @@
     }
 
     h4 {
-        font-size: 15px;
+        font-size: 17px;
         line-height: 20px;
     }
 
