@@ -92,13 +92,13 @@ var panOptions = {
 
 
   function getColor(d) {
-    return d > 90 ? '#840303' :
-           d > 80  ? '#9A0000' :
-           d > 70  ? '#b31c1b' :
+    return d > 80 ? '#840303' :
+           d > 70  ? '#9A0000' :
+           d > 60  ? '#b31c1b' :
            // d > 60  ? '#75507b' :
-           d > 60  ? '#BE0E0E' :
-           d > 50  ? '#DA4747' :
-           d > 40  ? '#FFA6A6' :
+           d > 50  ? '#BE0E0E' :
+           d > 40  ? '#DA4747' :
+           d > 30  ? '#FFA6A6' :
                      '#FFE7E7' ;
 
         // return d > 90 ? '#08517C' :
@@ -147,7 +147,7 @@ var panOptions = {
     updateChart3(e.target.feature.properties);
 
     // console.log(layer.feature.properties.VALUE2);
-    $('#side').html('<center><h4 style="color:white; padding-top:10px; padding-bottom:5px; margin-top: 0px; margin-bottom: 0px;">Vacant Units, NYC - 2016' + '<br><b><font size ="5" color="white">' + layer.feature.properties.VALUE2 + '%' +'</font></b> ' + '</h4></center>');
+    $('#side').html('<center><h4 style="color:white; padding-top:10px; padding-bottom:5px; margin-top: 0px; margin-bottom: 0px;">Unoccupied Apartments, NYC - 2016' + '<br><b><font size ="5" color="white">' + layer.feature.properties.VALUE2 + '%' +'</font></b> ' + '</h4></center>');
   	}
 
   function resetHighlight(e) {
