@@ -1,4 +1,4 @@
-var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',{
+var layer = L.tileLayer('https://api.mapbox.com/styles/v1/livenlulu/civklqgt8007y2kqqt5b61zc9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGl2ZW5sdWx1IiwiYSI6ImNpZ3h0ZzltbzB1cTQ0cG0zamthcno1dmwifQ.vZrmbXCCq15ZVuF6g6vhkA',{
     attribution: ''
 });
 
